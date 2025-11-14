@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import lombok.Getter;
+@Getter
 
 public class Etudiants extends Personne {
     private final String groupe;
@@ -8,13 +10,5 @@ public class Etudiants extends Personne {
         super(id, nom, prenom, dateNaissance, email, numeroTelephone);
         this.groupe = groupe;
         this.tuteurs = tuteurs;
-    }
-
-    public String getGroupe() {
-        return groupe;
-    }
-
-    public Tuteurs getTuteurs() {
-        return tuteurs;
     }
 }

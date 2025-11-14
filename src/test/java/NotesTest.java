@@ -45,7 +45,6 @@ class NotesTest {
 
     @Test
     void getCourseGrade() {
-        // ARRANGE
         Etudiants etu = new Etudiants(
                 1, "Jean", "Paul",
                 LocalDate.of(2000, 1, 1),
