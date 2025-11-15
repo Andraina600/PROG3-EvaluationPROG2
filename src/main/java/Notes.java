@@ -17,7 +17,7 @@ public class Notes {
         this.historiqueNotes = historiqueNotes;
     }
 
-    public double getExamGrade(Instant t) {
+    public double getExamGrade(Examens examens, Etudiants etudiants, Instant t) {
         return historiqueNotes.stream()
                 .filter(note -> note.getDate().isBefore(t))
                 .max(Comparator.comparing(HistoriqueNotes::getDate))
@@ -32,7 +32,7 @@ public class Notes {
         for (Notes note : tousLesNotsDeEtudiant) {
             if (note.examens.getCours().equals(cours)) {
 
-                double valeur = note.getExamGrade(t);
+                double valeur = note.getExamGrade(note.getExamens(), etudiant,t);
 
                 total += valeur * note.examens.getCoefficient();
                 totalCoeff += note.examens.getCoefficient();

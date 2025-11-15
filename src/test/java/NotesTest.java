@@ -39,7 +39,7 @@ class NotesTest {
                         new HistoriqueNotes(14.0, "correction", t2)
                 )
         );
-        double result = notes.getExamGrade(t3);
+        double result = notes.getExamGrade(exam, etu, t3);
         assertEquals(14.0, result);
     }
 
